@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PakTech Job Copilot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 280px;
+            padding: 15px;
+            background: #f5f5f5;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        #collectVisible {
+            background: #0073b1;
+            color: white;
+        }
+
+        #collectSingle {
+            background: #28a745;
+            color: white;
+        }
+
+        #syncBackend {
+            background: #ff9800;
+            color: white;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-size: 13px;
+            min-height: 30px;
+            text-align: center;
+            color: #333;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .footer {
+            margin-top: 12px;
+            font-size: 11px;
+            text-align: center;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>PakTech Job Copilot</h2>
+
+    <button id="collectVisible">Collect Visible Listings</button>
+    <button id="collectSingle">Collect Current Job Details</button>
+    <button id="syncBackend">Send Saved Jobs to Local Backend</button>
+
+    <div id="status">Ready.</div>
+
+    <div class="footer">Karachi Tech Market Optimized</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "PakTech Job Copilot",
+  "version": "1.0",
+  "description": "Collect and analyze tech jobs from LinkedIn, Indeed, Rozee, Mustakbil, Glassdoor and company career sites.",
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://pk.indeed.com/*",
+    "https://www.indeed.com/*",
+    "https://www.rozee.pk/*",
+    "https://www.mustakbil.com/*",
+    "https://www.glassdoor.com/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PakTech Job Copilot"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pk.indeed.com/*",
+        "https://www.indeed.com/*",
+        "https://www.rozee.pk/*",
+        "https://www.mustakbil.com/*",
+        "https://www.glassdoor.com/*",
+        "<all_urls>"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
